@@ -51,13 +51,13 @@ if(!isAutoPlaying){
  })
 
 
- document.querySelector('.js-Paper-button') .addEventListener('click',()=> {
-  playgame('Paper');
+ document.querySelector('.js-paper-button') .addEventListener('click',()=> {
+  playgame('paper');
  })
 
 
- document.querySelector('.js-Scissors-button') .addEventListener('click',()=> {
-  playgame('Scissors');
+ document.querySelector('.js-scissors-button') .addEventListener('click',()=> {
+  playgame('scissors');
  })
 
 
@@ -69,7 +69,7 @@ if(event.key === 'r') {
 }else if(event.key === 'p') {
   playgame('paper');
 }else if (event.key === 's'){
-  playgame('Scissors');
+  playgame('scissors');
 }
 
 });
@@ -81,30 +81,30 @@ if(event.key === 'r') {
   const computerMove =  PickComputerMove();
   let result = '';
   
-  if(playerMove === 'Scissors'){
+  if(playerMove === 'scissors'){
   if (computerMove === 'rock') {
   result = 'You lose.';
-  }else if ( computerMove === 'Paper'){
+  }else if ( computerMove === 'paper'){
   result = 'You win.';
-  }else if ( computerMove === 'Scissors'){
+  }else if ( computerMove === 'scissors'){
    result = 'Tie.';
    }
   
-  }else if(playerMove === 'Paper'){
+  }else if(playerMove === 'paper'){
     if (computerMove === 'rock') {
      result =  'You win.';
-    }else if ( computerMove === 'Paper'){
+    }else if ( computerMove === 'paper'){
       result = 'Tie.';
-    }else if ( computerMove === 'Scissors'){
+    }else if ( computerMove === 'scissors'){
         result ='You lose.';
     }
     
   }else if(playerMove === 'rock'){
       if (computerMove === 'rock') {
         result = 'Tie.';
-      }else if ( computerMove === 'Paper'){
+      }else if ( computerMove === 'paper'){
       result = 'You lose.';
-      }else if ( computerMove === 'Scissors'){
+      }else if ( computerMove === 'scissors'){
         result = 'You win.'
       }
   }
@@ -146,9 +146,9 @@ if(event.key === 'r') {
         if (randomNumber >= 0 && randomNumber <1/3){
         computerMove ='rock';
         }else if (randomNumber >= 1/3 && randomNumber <2/3) {
-           computerMove ='Paper';
+           computerMove ='paper';
         }else if (randomNumber >= 2/3 && randomNumber <1){
-           computerMove ='Scissors';
+           computerMove ='scissors';
         }
      return computerMove;
 
